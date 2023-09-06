@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info, .project-info {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .contact-info h3, .project-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            max-width: 100px; /* Ajusta el tamaño máximo del logo */
+            height: auto;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos Agrícolas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="historial.html">Pedidos</a></li>
+                <li><a href="registro_usuarios.html">Registro</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="inicio">
+        <img src="img/26.png" alt="imagen cabecera">
+        <div class="bienvenida">
+            Bienvenidos, llevamos los productos del <span class="destacado">CAMPO</span> a tu <span class="destacado">MESA</span>.
+        </div>
+</section>
+
+    <section class="banner">
+        <img src="img/BAnn..png" alt="Productos Agrícolas" style="width: 100%;">
+    </section>
+
+
+
+    <section id="productos" class="productos">
+
+
+        <div class="producto">
+            <img src="img/1.jpg" alt="Aguacate">
+            <h3>Aguacate Hass</h3>
+            <p> Nuestro aguacate Hass, ¡tan cremosito y rico como el amor de abuela!
+                Perfecto para hacer guacamole o para acompañar tus arepas mañaneras.
+                ¡es como llevarse un pedacito de campo a casa!.</p>
+            <p><strong>Precio: $3.700</strong></p>
+            <p>Unidad de medida: Libra</p>
+            <button onclick="agregarAlCarrito(1, 'Aguacate Hass', 3700)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/2.jpg" alt="Carne">
+            <h3>Carne</h3>
+            <p>La carne de res, ¡qué maravilla! Con ese sabor a hogar y parrillada, 
+               es como un abrazo en cada bocado. Para que nunca falte un buen asado en tu mesa.</p>
+            <p><strong>Precio: $7.500</strong></p>
+            <p>Unidad de medida: Libra</p>
+            <button onclick="agregarAlCarrito(2, 'Carne', 7500)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/3.jpg" alt="Fresa">
+            <h3>Fresa</h3>
+            <p>¡Las fresas fresquitas, pa' endulzarte el día! Ideales para postres, batidos 
+                o simplemente pa' picar. Una dulzura que viene de la tierra.</p>
+            <p><strong>Precio: $4.200</strong></p>
+            <p>Unidad de medida: Libra</p>
+            <button onclick="agregarAlCarrito(3, 'Fresa', 4200)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/4.jpg" alt="Mojarra">
+            <h3>Mojarra Roja</h3>
+            <p>La mojarra roja, ¡pura frescura de los ríos! Perfecta pa' hacerla al horno
+                o a la parrilla, y compartirla con los amigos. Pesca'o de la región.</p>
+            <p><strong>Precio: $15.800</strong></p>
+            <p>Unidad de medida: Libra</p>
+            <button onclick="agregarAlCarrito(4, 'Mojarra Roja', 15800)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/5.jpg" alt="Naranja">
+            <h3>Naranja</h3>
+            <p>Naranjas fresquitas, ¡como un trago de sol en cada sorbo! Ideales pa' exprimir 
+                o pa' pelar y disfrutar.Un rayito de sol en tu canasta.</p>
+            <p><strong>Precio: $3.000</strong></p>
+            <p>Unidad de medida: Libra</p>
+            <button onclick="agregarAlCarrito(5, 'Naranja', 3000)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/6.jpg" alt="Papa">
+            <h3>Papa Sabanera</h3>
+            <p>Papas sabaneras, ¡las de toda la vida! Pa' freírlas doraditas o cocinarlas al horno.</p>
+            <p><strong>Precio: $2.700</strong></p>
+            <p>Unidad de medida: Libra</p>
+            <button onclick="agregarAlCarrito(6, 'Papa Sabanera', 2700 )">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/7.jpeg" alt="Papaya">
+            <h3>Papaya</h3>
+            <p>Papayas fresquitas, ¡sabor tropical en tu plato! Pa' ensaladas de frutas o pa' comerlas solitas. 
+               Como un viaje a la costa.</p>
+            <p><strong>Precio: $1.900</strong></p>
+            <p>Unidad de medida: Kilo</p>
+            <button onclick="agregarAlCarrito(7, 'Papaya', 1900)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/8.jpg" alt="Tomate">
+            <h3>Tomate</h3>
+            <p>Tomates fresquitos de la huerta, ¡el secreto de las mejores salsas! Ideales pa' las recetas más sabrosas.
+               El toque maestro de la cocina.</p>
+            <p><strong>Precio: $2.100</strong></p>
+            <p>Unidad de medida: Libra</p>
+            <button onclick="agregarAlCarrito(8, 'Tomate', 2100)">Agregar al Carrito</button>
+        </div>
+
+    </section>
+
+    <div id="carrito-contenido">
+        <h2>Carrito de Compras</h2>
+        <div id="carrito" class="carrito">
+            <ul id="lista-productos">
+ 
+            </ul>
+        </div>
+        <p style="font-size: 22px;">Precio total: <span id="precio-total">$0</span></p>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <div class="contenido">
+            <h2>Acerca de Nosotros</h2>
+            <img src="img/Im.png" alt="Imagen Nosotros" width= 100% height= auto>
+        </div>
+    </section>
+        
+                
+    <section id="pedidos" class="pedidos">
+ 
+    </section>
+
+    <section id="login" class="login">
+  
+  
+    </section>
+
+    <section class="footer">
+        <p>&copy; 2023 Tienda de Productos Agrícolas</p>
+    </section>
+
+
+    <a id="btn-arriba" href="#inicio">Volver arriba</a>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  <script>
+
+   var carrito = []; // Declara un array llamado 'carrito' para almacenar productos seleccionados.
+
+    function agregarAlCarrito(idProducto, nombre, precio) { 
+        // Esta función agrega un producto al carrito.
+
+        // Busca si el producto ya existe en el carrito.
+  var productoExistente = carrito.find((item) => item.id === idProducto);
+    
+      if (productoExistente) {
+        productoExistente.cantidad++;
+      } else {
+        var nuevoProducto = {
+          id: idProducto,
+          nombre: nombre,
+          precio: precio,
+          cantidad: 1,
+        };
+        carrito.push(nuevoProducto);
+      }
+      // Agrega el nuevo producto al carrito.
+      mostrarProductosEnCarrito();
+    }
+    
+    // Llama a la función para mostrar los productos en el carrito.
+    function mostrarProductosEnCarrito() {
+      var carritoContenido = document.getElementById("carrito-contenido");
+      var precioTotal = 0;
+    
+
+      carritoContenido.innerHTML = "";
+    
+      carrito.forEach((producto) => {
+        var subtotal = producto.precio * producto.cantidad;
+        precioTotal += subtotal;
+    
+        var productoHTML =
+          '<div class="carrito-producto">' +
+          "<h3>" +
+          producto.nombre +
+          "</h3>" +
+          "<p>Cantidad: " +
+          producto.cantidad +
+          "</p>" +
+          "<p>Subtotal: $" +
+          subtotal +
+          "</p>" +
+          "</div>";
+    
+        carritoContenido.innerHTML += productoHTML;
+      });
+    
+     
+      var precioTotalElemento = document.getElementById("precio-total");
+      precioTotalElemento.innerText = "$" + precioTotal;
+    }
+ 
+ </script>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Correo Electrónico: q.ariascamilo69@gmail.com / claudiamarcelamendozajimenez@gmail.com </p>
+                <p>Teléfono: 300-2524611 / 302-2450153</p>
+            </div>
+            <div class="project-info">
+                <h3>Acerca del Proyecto</h3>
+                <p>ANALISIS Y DESARROLLO DE SOFTWARE FICHA 2455261. Proyecto Nuestra tierra
+                    Integrado por Camilo Arias y Marcela Mendoza
+                </p>
+            </div>
+            <div class="logo">
+                <img src="img/sena_logo.png" alt="Logo de tu proyecto">
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

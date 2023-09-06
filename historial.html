@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Pedidos</title>
+</head>
+<body>
+    <header>
+        <!-- Aquí puedes agregar la barra de navegación u otros elementos comunes a tu sitio -->
+        <h1>Historial de Pedidos</h1>
+    </header>
+    <main>
+        <section id="historial">
+            <!-- Verificar si el usuario ha iniciado sesión y tiene pedidos -->
+            <?php
+            // Simula la verificación de inicio de sesión y la recuperación de pedidos
+            $usuarioIniciado = false; // Cambia a true si el usuario ha iniciado sesión
+            $pedidos = array(); // Aquí deberías cargar los pedidos del usuario desde la base de datos
+
+            if ($usuarioIniciado && count($pedidos) > 0) {
+                // Mostrar los pedidos si el usuario ha iniciado sesión y tiene pedidos
+                foreach ($pedidos as $pedido) {
+                    echo '<div class="pedido">';
+                    echo '<h2>Número de Pedido: ' . $pedido['numero_pedido'] . '</h2>';
+                    echo '<p>Fecha del Pedido: ' . $pedido['fecha_pedido'] . '</p>';
+                    echo '<p>Productos:</p>';
+                    echo '<ul>';
+                    foreach ($pedido['productos'] as $producto) {
+                        echo '<li>' . $producto['nombre'] . ' - Cantidad: ' . $producto['cantidad'] . '</li>';
+                    }
+                    echo '</ul>';
+                    echo '</div>';
+                }
+            } else {
+                // Mostrar mensaje si el usuario no ha iniciado sesión o no tiene pedidos
+                echo '<p>Aún no has realizado pedidos o debes iniciar sesión en tu perfil para acceder a tu historial. Gracias.</p>';
+            }
+            ?>
+        </section>
+    </main>
+    <footer>
+        <!-- Aquí puedes agregar el pie de página u otros elementos comunes a tu sitio -->
+    </footer>
+</body>
+</html>

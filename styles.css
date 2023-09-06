@@ -1,0 +1,136 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+body {
+    background-color: #486145d0;
+}
+
+#btn-arriba {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 999;
+}
+
+#btn-arriba:hover {
+    background-color: #738d7b8d;
+}
+
+.nosotros {
+    background-color: #515c4e95;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.nosotros h2 {
+    color: #000000;
+    font-size: 44px;
+}
+
+
+.inicio {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+}
+
+.inicio img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bienvenida {
+    border: 2px dashed #333;
+    padding: 20px;
+    display: inline-block;
+    text-align: justify;
+    max-width: 600px;
+    background-color: white;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+.bienvenida .destacado {
+    color: #425c36;
+    text-decoration: underline;
+}
+
+.login-popup {
+    display: none;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 70px;
+}
+
+.producto {
+    width: calc(25% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.producto img {
+    max-width: 250px;
+    height: auto;
+}
+
+.producto strong {
+    font-weight: bold;
+}
+
+.producto input[type="number"] {
+    width: 50px;
+}
+
+.carrito {
+    position: center;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(101, 110, 101, 0.643);
+    box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; 
+}
